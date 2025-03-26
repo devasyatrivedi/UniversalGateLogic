@@ -8,10 +8,10 @@ const Header: React.FC = () => {
         <h1 className="text-2xl font-bold mb-2 md:mb-0">Digital Logic Virtual Lab</h1>
         <nav>
           <ul className="flex space-x-6">
-            <li><Link href="/"><a className="hover:text-blue-200 font-medium">Home</a></Link></li>
-            <li><a href="#" className="hover:text-blue-200 font-medium">Experiments</a></li>
-            <li><a href="#" className="hover:text-blue-200 font-medium">Theory</a></li>
-            <li><a href="#" className="hover:text-blue-200 font-medium">Help</a></li>
+            <li><Link href="/" className="hover:text-blue-200 font-medium">Home</Link></li>
+            <li><Link href="#experiments" className="hover:text-blue-200 font-medium">Experiments</Link></li>
+            <li><Link href="#theory" className="hover:text-blue-200 font-medium">Theory</Link></li>
+            <li><Link href="#help" className="hover:text-blue-200 font-medium">Help</Link></li>
           </ul>
         </nav>
       </div>
