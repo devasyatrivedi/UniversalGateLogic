@@ -137,7 +137,17 @@ export class MemStorage implements IStorage {
   
   async createCircuit(insertCircuit: InsertCircuit): Promise<Circuit> {
     const id = this.circuitId++;
-    const circuit: Circuit = { ...insertCircuit, id };
+    
+    // Create a properly typed circuit object
+    const circuit: Circuit = { 
+      id,
+      name: insertCircuit.name,
+      description: insertCircuit.description ?? null,
+      inputs: insertCircuit.inputs ?? 2,
+      gateType: insertCircuit.gateType,
+      implementation: insertCircuit.implementation
+    };
+    
     this.circuits.set(id, circuit);
     return circuit;
   }
